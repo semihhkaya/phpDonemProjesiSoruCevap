@@ -1,0 +1,9 @@
+RewriteEngine on 
+
+Rewriterule ^([0-9a-zA-Z-_/]+).html$   ?do=devam&link=$1
+Rewriterule ^etiket/([^/]*)$  ?do=etiket&link=$1
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+Rewriterule ^([0-9a-zA-Z-_/]+)(/?)$   ?do=$1
